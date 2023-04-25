@@ -5,7 +5,7 @@ import CaroselPerguntas from './components/CaroselPerguntas';
 
 function App() {
   return (
-    <CaroselPerguntas />
+    <Capa />
   );
 }
 
