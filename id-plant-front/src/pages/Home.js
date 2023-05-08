@@ -1,4 +1,6 @@
-export default function Capa() {
+import { Link, Outlet } from "react-router-dom";
+
+export default function Home() {
     return <>
         <section>
             <div className="container">
@@ -9,11 +11,12 @@ export default function Capa() {
                             <h3>Id Plant</h3>
                             <p>Que tal testar os seus conhecimentos sobre a fauna local ?</p>
                             <p>Vamos descobrir qual o nível da sua segueira vegetal</p>
-                            <button type="button" class="btn btn-outline-success align-self-center">Começar <i class="bi bi-arrow-right-short"></i></button>
+                            <Link type="button" className="btn btn-outline-success align-self-center" to="/perguntas">Começar <i className="bi bi-arrow-right-short"></i></Link>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <Outlet />
     </>
 }

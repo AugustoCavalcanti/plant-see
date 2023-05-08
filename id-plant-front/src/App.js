@@ -10,16 +10,17 @@ import Resultado from './pages/Resultado';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />}>
-          <Route index element={<Home />} />
-          <Route path="perguntas" element={<Carosel />} />
-          <Route path="resultado" element={<Resultado />} />
-          <Route path="*" element={<NoPage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/">
+            <Route index element={<Home />} />
+            <Route path="perguntas" element={<Carosel />} />
+            <Route path="resultado" element={<Resultado />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 // function App() {

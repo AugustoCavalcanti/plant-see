@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "perguntas",
+  "info": {
+    "singularName": "pergunta",
+    "pluralName": "perguntas",
+    "displayName": "pergunta",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Pergunta": {
+      "type": "string",
+      "required": true,
+      "default": "Qual o nome desta planta ?"
+    },
+    "Opcoes": {
+      "type": "enumeration",
+      "enum": [
+        "Cajueiro",
+        "Fava de Bolota",
+        "Palmeira Buriti",
+        "Pequizeiro"
+      ]
+    },
+    "UrlImagem": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

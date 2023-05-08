@@ -1,5 +1,6 @@
 import Carousel from 'react-bootstrap/Carousel';
 import Form from 'react-bootstrap/Form';
+import { Link, Outlet } from "react-router-dom";
 
 export default function CaroselPerguntas() {
     return <>
@@ -129,6 +130,7 @@ export default function CaroselPerguntas() {
                             </Carousel.Caption>
                         </Carousel.Item>
                     </Carousel>
+                    <Link type="button" className="btn btn-outline-primary align-self-center" to="/resultado">Finalizar <i className="bi bi-arrow-right-short"></i></Link>
                 </Form>
         </section>
     </>
