@@ -17,18 +17,15 @@
       "required": true,
       "default": "Qual o nome desta planta ?"
     },
-    "Opcoes": {
-      "type": "enumeration",
-      "enum": [
-        "Cajueiro",
-        "Fava de Bolota",
-        "Palmeira Buriti",
-        "Pequizeiro"
-      ]
-    },
     "UrlImagem": {
       "type": "string",
       "required": true
+    },
+    "alternativas": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::alternativa.alternativa",
+      "inversedBy": "perguntas"
     }
   }
 }

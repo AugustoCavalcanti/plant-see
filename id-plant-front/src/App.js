@@ -1,9 +1,6 @@
 import './App.css';
-import Capa from './components/Capa';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import CaroselPerguntas from './components/CaroselPerguntas';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import Resultado from './components/Resultado';
 import Home from './pages/Home';
 import Carosel from './pages/Carosel';
 import Resultado from './pages/Resultado';

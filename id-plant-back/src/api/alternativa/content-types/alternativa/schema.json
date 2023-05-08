@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "alternativas",
+  "info": {
+    "singularName": "alternativa",
+    "pluralName": "alternativas",
+    "displayName": "Alternativa"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "TextoAlternativa": {
+      "type": "string",
+      "required": true
+    },
+    "Correto": {
+      "type": "boolean",
+      "default": false
+    },
+    "perguntas": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::pergunta.pergunta",
+      "mappedBy": "alternativas"
+    }
+  }
+}

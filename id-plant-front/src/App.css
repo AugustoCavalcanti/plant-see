@@ -26,3 +26,9 @@
 .carousel-item {
   max-height: 40rem;
 }
+
+@media (max-width: 480px) {
+  .carousel-item {
+    min-height: 35rem;
+  }
+}
