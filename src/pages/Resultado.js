@@ -1,6 +1,18 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 export default function Resultado() {
+    const { id } = useParams();
+    const [resposta, setResposta] = useState([])
+    useEffect(() => {
+        fetch('http://127.0.0.1:8000/api/answers/' + id + '')
+            .then(res => res.json())
+            .then(res => {
+                setResposta(res)
+            })
+    }, [])
+    console.log(resposta);
     return <>
         <section>
             <div className="container">

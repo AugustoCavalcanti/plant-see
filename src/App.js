@@ -23,7 +23,7 @@ function App() {
           <Route path="/">
             <Route index element={<Home />} />
             <Route path="perguntas" element={<Carosel perguntas={perguntas} />} />
-            <Route path="resultado" element={<Resultado />} />
+            <Route path="resultado/:id" element={<Resultado />} />
           </Route>
         </Routes>
       </BrowserRouter>
