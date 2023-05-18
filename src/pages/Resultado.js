@@ -6,7 +6,7 @@ export default function Resultado() {
     const { id } = useParams();
     const [resposta, setResposta] = useState([])
     useEffect(() => {
-        fetch('http://127.0.0.1:8000/api/answers/' + id + '')
+        fetch('http://127.0.0.1:8000/api/answer/' + id + '')
             .then(res => res.json())
             .then(res => {
                 setResposta(res)

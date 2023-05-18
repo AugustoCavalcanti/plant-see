@@ -17,10 +17,8 @@ export default function CaroselPerguntas({ perguntas }) {
         const resposta_id = fetch('http://127.0.0.1:8000/api/questions_register/', { method: form.method, body: formData })
                             .then(res => res.json())
                             .then(res => {
-                                console.log(res.id);
-                                navigate('/resultado/'+res.id);
+                                navigate('/resultado/'+res.resposta);
                             });
-        console.log(resposta_id);
     };
     return <>
         <section>
@@ -55,7 +53,6 @@ export default function CaroselPerguntas({ perguntas }) {
                     })}
                 </Carousel>
                 <Button type="submit" className="btn btn-light buttom-finalizar shadow-2">Finalizar <i className="bi bi-arrow-right-short"></i></Button>
-                <Button type="submit">Submit form</Button>
             </Form>
         </section>
     </>
